@@ -71,7 +71,7 @@ label continue:
         
 label win:
     stop music
-    play sound "win.mp3"
+    play sound "victory.wav"
     "you win"
     stop sound
     
