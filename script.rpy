@@ -15,8 +15,14 @@ label battle1:
     s "stickman MP = [s_mp]"
     menu:
         "Attack":
-            $ monster_hp -= 10
-            
+            $ atk = renpy.random.randint(1,100)
+            if atk < 85:
+                s " you attack the monster"
+                $ monster_hp -= 10
+            else:
+                s " You Critted"
+                $ monster_hp -= 25
+         
         "Cast Fireball":
             if s_mp > 0:
                 s "cast fireball!"
